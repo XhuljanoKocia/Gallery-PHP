@@ -15,6 +15,15 @@
                 die("Database connection failed! " . mysqli_error());
             }
         }
+
+        public function query($sql){
+            $result = mysqli_query($this -> connection, $sql);
+            
+            if(!$result){
+                die("Query Failed!");
+            }    
+            return $result;
+        }
     }
 
     $database = new Database();
