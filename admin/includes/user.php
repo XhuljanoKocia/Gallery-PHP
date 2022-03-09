@@ -1,5 +1,11 @@
 <?php
     class User{
+        public $id;
+        public $username;
+        public $password;
+        public $first_name;
+        public $last_name;
+
         public static function find_all_users(){
             return self::find_this_query("SELECT * FROM users");
         }
