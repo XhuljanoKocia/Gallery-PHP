@@ -25,9 +25,9 @@
             return $result_set;
         }
 
-        private static function instantiation(){
+        public static function instantiation($found_user){
             $the_object = new self;
-            
+
             $the_object -> id = $found_user['id'];
             $the_object -> username = $found_user['username'];
             $the_object -> password = $found_user['password'];
