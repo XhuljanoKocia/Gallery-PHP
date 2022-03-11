@@ -20,6 +20,7 @@
     } else {
         $username = "";
         $password = "";
+        $the_message = "";
     }
 ?>
 
