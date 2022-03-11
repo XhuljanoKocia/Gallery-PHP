@@ -8,8 +8,13 @@
                 <small>Subheading</small>
             </h1>
             <?php
-                $found_user = User::find_user_by_id(2);
-                echo $found_user -> username;
+                $user = new User();
+                $user -> username = "Example_username";
+                $user -> password = "Example_password";
+                $user -> first_name = "John";
+                $user -> last_name = "Doe";
+
+                $user -> create();
             ?>
             <ol class="breadcrumb">
                 <li>
