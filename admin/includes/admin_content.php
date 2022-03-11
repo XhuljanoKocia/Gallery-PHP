@@ -8,13 +8,10 @@
                 <small>Subheading</small>
             </h1>
             <?php
-                $user = new User();
-                $user -> username = "Example_username";
-                $user -> password = "Example_password";
-                $user -> first_name = "John";
-                $user -> last_name = "Doe";
+                $user = User::find_user_by_id(3);
+                $user -> last_name = "Whatever";
 
-                $user -> create();
+                $user -> update();
             ?>
             <ol class="breadcrumb">
                 <li>

@@ -92,7 +92,7 @@
 
             $database -> query($sql);
 
-            return (mysqli_affected_row($database -> connection) == 1) ? true : false;
+            return (mysqli_affected_rows($database -> connection) == 1) ? true : false;
         }
     }
 ?>
