@@ -10,7 +10,7 @@
             <?php
                 $user = User::find_user_by_id(2);
 
-                $user -> username = "Lightstyle";
+                $user -> username = "Lighto";
                 $user -> save();
             ?>
             <ol class="breadcrumb">
