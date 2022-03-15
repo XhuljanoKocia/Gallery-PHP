@@ -8,10 +8,10 @@
                 <small>Subheading</small>
             </h1>
             <?php
-                $users = User::find_all();
+                $photos = Photo::find_all();
 
-                foreach($users as $user){
-                    echo $user -> username;
+                foreach($photos as $photo){
+                    echo $photo -> title;
                 }
             ?>
             <ol class="breadcrumb">
