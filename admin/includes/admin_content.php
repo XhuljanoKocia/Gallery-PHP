@@ -9,9 +9,10 @@
             </h1>
             <?php
                 $user = User::find_user_by_id(3);
-                $user -> last_name = "Whatever";
-
-                $user -> update();
+                
+                if($user != null){
+                    $user -> delete();
+                }
             ?>
             <ol class="breadcrumb">
                 <li>
