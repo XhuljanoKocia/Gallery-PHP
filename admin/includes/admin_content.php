@@ -8,14 +8,11 @@
                 <small>Subheading</small>
             </h1>
             <?php
-                $user = new User();
+                $users = User::find_all();
 
-                $user -> username = "Test";
-                $user -> password = "123";
-                $user -> first_name = "Software";
-                $user -> last_name = "Tester";
-
-                $user -> create();
+                foreach($users as $user){
+                    echo $user -> username;
+                }
             ?>
             <ol class="breadcrumb">
                 <li>
