@@ -8,11 +8,10 @@
                 <small>Subheading</small>
             </h1>
             <?php
-                $user = User::find_user_by_id(3);
-                
-                if($user != null){
-                    $user -> delete();
-                }
+                $user = User::find_user_by_id(2);
+
+                $user -> username = "Lightstyle";
+                $user -> save();
             ?>
             <ol class="breadcrumb">
                 <li>
