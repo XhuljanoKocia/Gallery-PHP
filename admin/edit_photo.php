@@ -5,8 +5,19 @@
     }
 ?>
 <?php
-    if(isset($_POST['update'])){
-        echo "It works";
+    if(empty($_GET['id'])){
+        redirect("photos.php");
+    } else {
+        $photo = Photo::find_by_id($_GET['id']);
+
+        if(isset($_POST['update'])){
+            if($photo){
+                $_POST['title'];
+                $_POST['caption'];
+                $_POST['alternate_text'];
+                $_POST['description'];
+            }
+        }
     }
 ?>
 
