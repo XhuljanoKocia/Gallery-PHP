@@ -12,10 +12,10 @@
 
         if(isset($_POST['update'])){
             if($photo){
-                $_POST['title'];
-                $_POST['caption'];
-                $_POST['alternate_text'];
-                $_POST['description'];
+                $photo -> title = $_POST['title'];
+                $photo -> caption = $_POST['caption'];
+                $photo -> alternate_text = $_POST['alternate_text'];
+                $photo -> description = $_POST['description'];
             }
         }
     }
@@ -48,7 +48,7 @@
                         </div>
                         <div class="form-group">
                             <label for="caption">Caption</label>
-                            <input type="text" name="caption" class="form-control">
+                            <input type="text" name="caption" class="form-control" value="<?php echo $photo -> title; ?>">
                         </div>
                         <div class="form-group">
                             <label for="alternate">Alternate Text</label>
