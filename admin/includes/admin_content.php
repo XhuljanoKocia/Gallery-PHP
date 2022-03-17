@@ -7,10 +7,6 @@
                 Admin
                 <small>Subheading</small>
             </h1>
-            <?php
-                $user = User::find_by_id(5);
-                echo $user -> username;
-            ?>
             <ol class="breadcrumb">
                 <li>
                     <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
