@@ -16,6 +16,8 @@
                 $photo -> caption = $_POST['caption'];
                 $photo -> alternate_text = $_POST['alternate_text'];
                 $photo -> description = $_POST['description'];
+
+                $photo -> save();
             }
         }
     }
@@ -41,7 +43,7 @@
                     <small>Subheading</small>
                 </h1>
 
-                <form action="edit_photo.php" method="post">
+                <form action="" method="post">
                     <div class="col-md-8">
                         <div class="form-group">
                             <input type="text" name="title" class="form-control" value="<?php echo $photo -> title; ?>">
