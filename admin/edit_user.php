@@ -66,8 +66,8 @@
                             <input type="text" name="last_name" class="form-control" value="<?php echo $user -> last_name; ?>">
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" class="form-control">
+                            <label for="password">New Password</label>
+                            <input type="password" name="password" class="form-control" value="<?php echo $user -> password; ?>">
                         </div>
                         <div class="form-group">
                             <input type="submit" name="update" class="btn btn-primary pull-right" value="Update">
