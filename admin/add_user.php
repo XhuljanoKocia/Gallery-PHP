@@ -5,18 +5,17 @@
     }
 ?>
 <?php
-    // $user = User::find_by_id($_GET['id']);
+    if(isset($_POST['create'])){
+        echo "Hello";
+        // if($user){
+        //     $user -> username = $_POST['username'];
+        //     $user -> first_name = $_POST['first_name'];
+        //     $user -> last_name = $_POST['last_name'];
+        //     $user -> password = $_POST['password'];
 
-    // if(isset($_POST['update'])){
-    //     if($user){
-    //         $user -> username = $_POST['username'];
-    //         $user -> first_name = $_POST['first_name'];
-    //         $user -> last_name = $_POST['last_name'];
-    //         $user -> password = $_POST['password'];
-
-    //         $user -> save();
-    //     }
-    // }
+        //     $user -> save();
+        // }
+    }
 ?>
 
         <!-- Navigation -->
@@ -40,7 +39,7 @@
                 </h1>
 
                 <form action="" method="post" enctype="multipart/form-data">
-                    <div class="col-md-8">
+                    <div class="col-md-6 col-md-offset-3">
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input type="text" name="username" class="form-control">
@@ -56,6 +55,9 @@
                         <div class="form-group">
                             <label for="password">Password</label>
                             <input type="text" name="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="create" class="btn btn-primary pull-right">
                         </div>
                     </div>    
                 </form>
