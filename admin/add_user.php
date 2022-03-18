@@ -5,16 +5,17 @@
     }
 ?>
 <?php
-    if(isset($_POST['create'])){
-        echo "Hello";
-        // if($user){
-        //     $user -> username = $_POST['username'];
-        //     $user -> first_name = $_POST['first_name'];
-        //     $user -> last_name = $_POST['last_name'];
-        //     $user -> password = $_POST['password'];
+    $user = new User();
 
-        //     $user -> save();
-        // }
+    if(isset($_POST['create'])){
+        if($user){
+            $user -> username = $_POST['username'];
+            $user -> first_name = $_POST['first_name'];
+            $user -> last_name = $_POST['last_name'];
+            $user -> password = $_POST['password'];
+
+            // $user -> save();
+        }
     }
 ?>
 
@@ -40,6 +41,9 @@
 
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                            <input type="file" name="user_image">
+                        </div>
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input type="text" name="username" class="form-control">
