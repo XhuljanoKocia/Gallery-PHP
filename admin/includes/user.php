@@ -11,7 +11,7 @@
         public $upload_directory = "images";
         public $image_placeholder = "http://placehold.jp/62x62.png";
 
-        public function save_user_and_image(){
+        public function upload_photo(){
             if(!empty($this -> errors)){
                 return false;
             } if(empty($this -> user_image) || empty($this -> tmp_path)){
@@ -26,10 +26,8 @@
             }
 
             if(move_uploaded_file($this -> tmp_path, $target_path)){
-                if($this -> create()){
-                    unset($this -> tmp_path);
-                    return true;
-                }
+                unset($this -> tmp_path);
+                return true;
             } else {
                 $this -> errors[] = "The file directory does not have permission.";
                 return false;
