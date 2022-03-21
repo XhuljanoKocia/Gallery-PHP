@@ -5,7 +5,9 @@
     }
 ?>
 <?php
-    $photos = Photo::find_all();
+    if(empty($_GET['id'])){
+        redirect("photos.php");
+    }
 ?>
 
         <!-- Navigation -->
@@ -24,34 +26,28 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Photos
-                    <small>Subheading</small>
+                    Comments
+                    <a href="add_comment.php" class="btn btn-primary">Add Comment</a>
                 </h1>
                 <div class="col-md-12">
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th>Photo</th>
                                 <th>Id</th>
-                                <th>File Name</th>
-                                <th>Title</th>
-                                <th>Size</th>
+                                <th>Author</th>
+                                <th>Body</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($photos as $photo) : ?>
+                            <?php foreach($comments as $comment) : ?>
                             <tr>
-                                <td><img class="admin-photo-thumbnail" src="<?php echo $photo -> picture_path(); ?>" alt="">
+                                <td><?php echo $comment -> id; ?></td>
+                                <td><?php echo $comment -> author; ?>
                                     <div class="action_links">
-                                        <a href="delete_photo.php?id=<?php echo $photo -> id; ?>">Delete</a>
-                                        <a href="edit_photo.php?id=<?php echo $photo -> id; ?>">Edit</a>
-                                        <a href="../photo.php?id=<?php echo $photo -> id; ?>">View</a>
+                                        <a href="delete_comment.php?id=<?php echo $comment -> id; ?>">Delete</a>
                                     </div>
                                 </td>
-                                <td><?php echo $photo -> id; ?></td>
-                                <td><?php echo $photo -> filename; ?></td>
-                                <td><?php echo $photo -> title; ?></td>
-                                <td><?php echo $photo -> size; ?></td>
+                                <td><?php echo $comment -> body; ?></td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>
