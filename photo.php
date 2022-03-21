@@ -15,8 +15,15 @@
 
         if($new_comment && $new_comment -> save()){
             redirect("photo.php?id={$photo -> id}");
+        } else {
+            $message = "We encountered a problem saving";
         }
+    } else {
+        $author = "";
+        $body = "";
     }
+
+    //Comment::find_the_comments($photo -> id);
 ?>
 
 <!DOCTYPE html>
