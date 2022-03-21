@@ -26,6 +26,7 @@
 
     $comments = Comment::find_the_comments($photo -> id);
 ?>
+<div class="row">
             <!-- Blog Post Content Column -->
             <div class="col-lg-12">
 
