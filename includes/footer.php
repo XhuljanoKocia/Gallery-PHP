@@ -5,7 +5,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Xhuljano Koçia <?php date_default_timezone_set("Europe/Berlin");?><?=date("Y");?></p>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
