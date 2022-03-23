@@ -4,6 +4,7 @@
     $items_per_page = 4;
     $items_total_count = Photo::count_all();
 
+
     $paginate = new Paginate($page, $items_per_page, $items_total_count);
 
     $sql = "SELECT * FROM photos ";
