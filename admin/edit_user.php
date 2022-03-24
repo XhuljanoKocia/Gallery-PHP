@@ -21,12 +21,15 @@
 
             if(empty($_FILES['user_image'])){
                 $user -> save();
+                redirect("users.php");
+                $session -> message("The user has been updated!");
             } else {
                 $user -> set_file($_FILES['user_image']);
                 $user -> upload_photo();
                 $user -> save();
 
-                redirect("edit_user.php?id={$user -> id}");
+                $session -> message("The user has been updated!");
+                redirect("users.php");
             }
         }
     }
