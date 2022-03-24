@@ -70,3 +70,8 @@
 #login-id label {
     color: #fff !important;
 }
+
+.action_links a {
+    margin-top: 5px;
+    margin-right: 10px;
+}

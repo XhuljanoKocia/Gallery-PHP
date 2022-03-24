@@ -10,8 +10,8 @@
     if($photo){
         $photo -> delete_photo();
         $session -> message("The {$photo -> filename} image has been deleted");
-        redirect("../photos.php");
+        redirect("photos.php");
     } else {
-        redirect("../photos.php");
+        redirect("photos.php");
     }
 ?>
