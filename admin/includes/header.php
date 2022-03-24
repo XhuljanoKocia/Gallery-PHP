@@ -32,6 +32,8 @@
 
     <link href="css/styles.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 </head>
